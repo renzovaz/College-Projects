@@ -30,7 +30,7 @@ Cada projeto neste repositório representa uma etapa da minha formação. Eles e
 
 ---
 
-## 📁 Estrutura do Repositório
+##  Estrutura do Repositório
 
 O repositório está estruturado com uma pasta para cada projeto. Dentro de cada pasta, você encontrará:
 
@@ -39,7 +39,7 @@ O repositório está estruturado com uma pasta para cada projeto. Dentro de cada
 
 ---
 
-## 📬 Contato
+##  Contato
 
 Para dúvidas, sugestões ou oportunidades de colaboração, entre em contato:
 
