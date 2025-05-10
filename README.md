@@ -43,6 +43,7 @@ O repositório está estruturado com uma pasta para cada projeto. Dentro de cada
 Para dúvidas, sugestões ou oportunidades de colaboração, entre em contato:
 
 - Email: eusourenzo@gmail.com  
+- Linkedin: https://www.linkedin.com/in/renzo-machado-022b8a364/
 
 
 ---
