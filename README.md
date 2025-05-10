@@ -21,7 +21,6 @@ Cada projeto neste repositório representa uma etapa da minha formação. Eles e
 - Lógica de programação e algoritmos
 - Programação orientada a objetos
 - Estruturas de dados
-- Desenvolvimento web e mobile
 - Modelagem e gerenciamento de banco de dados
 - Versionamento de código com Git e GitHub
 - Engenharia de requisitos e documentação técnica
