@@ -6,10 +6,10 @@ Avaliação Prática 1 - AP1
 
 - Resolva estes problemas usando a linguagem de programação Python:
 
-1. - Implemente o programa que calcule o volume de uma esfera de raio R. O usuário fornecerá o dado necessário. Onde: volume = 4 π r3
+1.  Implemente o programa que calcule o volume de uma esfera de raio R. O usuário fornecerá o dado necessário. Onde: volume = 4 π r3
 3
 
-2. - A água é um nutriente essencial. Sem ela, o corpo não pode funcionar com perfeição. Cada pessoa precisa de uma quantidade diferente de água para hidratar o corpo. A dose ideal, ou seja, a necessidade diária em litros é calculada através da fórmula: massa (em kg) vezes 0,03. Elabore o programa que realize esse cálculo.
+2.  A água é um nutriente essencial. Sem ela, o corpo não pode funcionar com perfeição. Cada pessoa precisa de uma quantidade diferente de água para hidratar o corpo. A dose ideal, ou seja, a necessidade diária em litros é calculada através da fórmula: massa (em kg) vezes 0,03. Elabore o programa que realize esse cálculo.
 
 3. Construa o programa que tendo como dados de entrada dois pontos quaisquer do plano cartesiano, P(x1, y1) e Q(x2, y2), calcule a distância entre eles. Use a seguinte fórmula:
 
