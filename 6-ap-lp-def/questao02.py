@@ -1,5 +1,5 @@
 def calcula_idade(ano_nascimento):
-    ano_atual = 2025  # atualize conforme necessário
+    ano_atual = 2025  
     idade = ano_atual - ano_nascimento
     return idade
 
