@@ -17,7 +17,7 @@
       margin-bottom: 40px;
     }
     .project {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
     .project pre {
       background-color: #ecf0f1;
@@ -30,6 +30,10 @@
     }
     a:hover {
       text-decoration: underline;
+    }
+    .download-link {
+      display: inline-block;
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -50,7 +54,8 @@
     <h2>Projetos Acadêmicos</h2>
 
     <div class="project">
-      <h3><a href="questao01.py">1 - Cálculo do Volume da Esfera</a></h3>
+      <h3>1 - Cálculo do Volume da Esfera</h3>
+      <a class="download-link" href="questao01.py" download>⬇ Baixar Código (questao01.py)</a>
       <pre><code>
 r = float(input('digite o valor da esfera'))
 volume = (4/3) * 3.14 * (r**4)
@@ -59,7 +64,8 @@ print(volume)
     </div>
 
     <div class="project">
-      <h3><a href="questao02.py">2 - Cálculo de Consumo de Água</a></h3>
+      <h3>2 - Cálculo de Consumo de Água</h3>
+      <a class="download-link" href="questao02.py" download>⬇ Baixar Código (questao02.py)</a>
       <pre><code>
 peso = float(input('digite seu peso'))
 agua = peso * 0.03
@@ -68,7 +74,8 @@ print('para seu peso, o consugmo ideal de agua seria {}'.format(agua))
     </div>
 
     <div class="project">
-      <h3><a href="questao03.py">3 - Distância entre Planos</a></h3>
+      <h3>3 - Distância entre Planos</h3>
+      <a class="download-link" href="questao03.py" download>⬇ Baixar Código (questao03.py)</a>
       <pre><code>
 A1 = 2
 B1 = -3
@@ -90,7 +97,8 @@ else:
     </div>
 
     <div class="project">
-      <h3><a href="questao04.py">4 - Números em Ordem Crescente</a></h3>
+      <h3>4 - Números em Ordem Crescente</h3>
+      <a class="download-link" href="questao04.py" download>⬇ Baixar Código (questao04.py)</a>
       <pre><code>
 n1 = int(input('digite um número inteiro'))
 n2 = int(input('digite outro número inteiro'))
@@ -102,7 +110,8 @@ elif n1 > n2:
     </div>
 
     <div class="project">
-      <h3><a href="questao05.py">5 - Cálculo de Peso Ideal</a></h3>
+      <h3>5 - Cálculo de Peso Ideal</h3>
+      <a class="download-link" href="questao05.py" download>⬇ Baixar Código (questao05.py)</a>
       <pre><code>
 sexo = input('digite seu sexo:')
 altura = float(input('digite sua altura:'))
@@ -111,7 +120,7 @@ if sexo == 'masculino':
     print('se voce for homem, seu peso ideal seria {:.2f}'.format(masculino))
 elif sexo == "feminino":
     mulher = (62.1 * altura) - 44.7
-    print("se voce for mulher, seu peso ideal {:.2f".format(mulher))  # ← erro na formatação
+    print("se voce for mulher, seu peso ideal {:.2f".format(mulher))  # ← erro proposital mantido
       </code></pre>
     </div>
 

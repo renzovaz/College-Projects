@@ -5,4 +5,4 @@ if sexo=='masculino':
     print('se voce for homem, seu peso ideal seria {:.2f}'.format(masculino))
 elif sexo=="feminino":
     mulher=(62.1*altura)-44.7
-    print("se voce for mulher, seu peso ideal {:.2f".format(mulher))
+    print("se voce for mulher, seu peso ideal {:.2f}".format(mulher))
