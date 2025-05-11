@@ -1,80 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Renzo Machado Vaz - Portfólio</title>
+  <meta charset="UTF-8">
+  <title>Seu Nome - Projetos Acadêmicos</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, sans-serif;
+      margin: 40px;
       background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
       color: #333;
     }
-    header {
-      background-color: #004d7a;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
+    h1, h2 {
+      color: #2c3e50;
     }
     section {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2, h3 {
-      color: #004d7a;
-    }
-    pre {
-      background-color: #f0f0f0;
-      padding: 15px;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-size: 14px;
+      margin-bottom: 40px;
     }
     .project {
-      background: white;
-      padding: 20px;
-      margin-bottom: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
     }
-    footer {
-      text-align: center;
-      background: #ddd;
-      padding: 15px;
-      margin-top: 40px;
+    .project pre {
+      background-color: #ecf0f1;
+      padding: 10px;
+      overflow-x: auto;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Renzo Machado Vaz</h1>
-  <p>Estudante de Engenharia de Software – CEUB</p>
-  <p>Brasília – DF | renzo.vaz@sempreceub.com</p>
-</header>
+  <h1>Seu Nome</h1>
+  <p><strong>Idade:</strong> Sua Idade</p>
+  <p><strong>E-mail:</strong> <a href="mailto:seu.email@exemplo.com">seu.email@exemplo.com</a></p>
+  <p><strong>Localização:</strong> Sua Cidade – UF</p>
+  <p><strong>Curso:</strong> Seu Curso – Instituição</p>
 
-<section>
-  <h2>Sobre Mim</h2>
-  <p>Sou Renzo Machado Vaz, estudante de Engenharia de Software no Centro Universitário CEUB, residente em Brasília-DF. Desde cedo, sou apaixonado por tecnologia, programação e inovação. Entrei no curso com o desejo de transformar ideias em soluções reais, criando sistemas que impactem firmemente o cotidiano das pessoas.</p>
-  <p>Atualmente estou no início de minha trajetória acadêmica, mas já venho desenvolvendo projetos pessoais e estudando por conta própria linguagens de programação e ferramentas de produtividade. Busco oportunidades de estágio ou participação em projetos para aplicar meus conhecimentos, crescer como profissional e contribuir com equipes multidisciplinares.</p>
+  <section>
+    <h2>Sobre Mim</h2>
+    <p>Descrição breve sobre você, seu interesse por tecnologia, projetos, estudos, etc.</p>
+  </section>
 
-  <h2>Formação</h2>
-  <ul>
-    <li>Ensino Médio Completo</li>
-    <li>Engenharia de Software (iniciado em 2025 – CEUB)</li>
-  </ul>
+  <section>
+    <h2>Projetos Acadêmicos</h2>
 
-  <h2>Cursos Complementares</h2>
-  <ul>
-    <li>Microsoft Excel Intermediário</li>
-    <li>Microsoft Word Intermediário</li>
-    <li>Noções de HTML, CSS e lógica de programação</li>
-    <li>Google Workspace para produtividade</li>
-  </ul>
+    <div class="project">
+      <h3><a href="questao01.py">1 - Cálculo do Volume da Esfera</a></h3>
+      <pre><code>
+r = float(input('digite o valor da esfera'))
+volume = (4/3) * 3.14 * (r**4)
+print(volume)
+      </code></pre>
+    </div>
 
-  <h2>Projetos Acadêmicos</h2>
+    <div class="project">
+      <h3><a href="questao02.py">2 - Cálculo de Consumo de Água</a></h3>
+      <pre><code>
+peso = float(input('digite seu peso'))
+agua = peso * 0.03
+print('para seu peso, o consugmo ideal de agua seria {}'.format(agua))
+      </code></pre>
+    </div>
 
-  <!-- Bloco de projetos com códigos inseridos -->
+    <div class="project">
+      <h3><a href="questao03.py">3 - Distância entre Planos</a></h3>
+      <pre><code>
+A1 = 2
+B1 = -3
+C1 = 4
+D1 = -5
+A2 = 2
+B2 = -3
+C2 = 4
+D2 = 7
+
+if (A1 * B2 == A2 * B1) and (A1 * C2 == A2 * C1) and (B1 * C2 == B2 * C1):
+    numerador = abs(D1 - D2)
+    denominador = (A1**2 + B1**2 + C1**2) ** 0.5
+    distancia = numerador / denominador
+    print("Distância entre os planos:", round(distancia, 2))
+else:
+    print("Os planos não são paralelos, então a distância é 0.")
+      </code></pre>
+    </div>
+
+    <div class="project">
+      <h3><a href="questao04.py">4 - Números em Ordem Crescente</a></h3>
+      <pre><code>
+n1 = int(input('digite um número inteiro'))
+n2 = int(input('digite outro número inteiro'))
+if n1 < n2:
+    print("ordem crescente dos números são {} {}.".format(n1, n2))
+elif n1 > n2:
+    print("a ordem crescente dos números e {} {}.".format(n1, n2))
+      </code></pre>
+    </div>
+
+    <div class="project">
+      <h3><a href="questao05.py">5 - Cálculo de Peso Ideal</a></h3>
+      <pre><code>
+sexo = input('digite seu sexo:')
+altura = float(input('digite sua altura:'))
+if sexo == 'masculino':
+    masculino = (72.7 * altura) - 58
+    print('se voce for homem, seu peso ideal seria {:.2f}'.format(masculino))
+elif sexo == "feminino":
+    mulher = (62.1 * altura) - 44.7
+    print("se voce for mulher, seu peso ideal {:.2f".format(mulher))  # ← erro na formatação
+      </code></pre>
+    </div>
+
+  </section>
+
+</body>
+</html>
