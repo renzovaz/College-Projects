@@ -1,4 +1,4 @@
-sexo=input('digite seu sexo:')
+sexo=input('digite seu genêro:')
 altura=float(input('digite sua altura:'))
 if sexo=='masculino':
     masculino=(72.7*altura)-58
