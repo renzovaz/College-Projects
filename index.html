@@ -2,27 +2,31 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Projetos Acadêmicos - Engenharia de Software</title>
+  <title>Renzo Machado Vaz - Projetos Acadêmicos</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      padding: 40px;
-    }
-    h1 {
+      margin: 40px;
+      background-color: #f9f9f9;
       color: #333;
     }
-    ul {
-      list-style: none;
-      padding: 0;
+    h1, h2 {
+      color: #2c3e50;
     }
-    li {
-      margin: 10px 0;
+    section {
+      margin-bottom: 40px;
+    }
+    .project {
+      margin-bottom: 20px;
+    }
+    .project pre {
+      background-color: #ecf0f1;
+      padding: 10px;
+      overflow-x: auto;
     }
     a {
+      color: #2980b9;
       text-decoration: none;
-      color: #007acc;
-      font-weight: bold;
     }
     a:hover {
       text-decoration: underline;
@@ -30,15 +34,108 @@
   </style>
 </head>
 <body>
-  <h1>Projetos Acadêmicos - Engenharia de Software</h1>
-  <p>Bem-vindo! Abaixo estão listados os projetos desenvolvidos durante minha graduação:</p>
-  <ul>
-    <li><a href="1-ap-lp-sequencia-if/">1 - Sequência IF</a></li>
-    <li><a href="2-ap-lp-sequencia-if/">2 - Sequência IF (Parte 2)</a></li>
-    <li><a href="3-ap-lp-while/">3 - Estrutura de Repetição WHILE</a></li>
-    <li><a href="4-ap-lp-for/">4 - Estrutura de Repetição FOR</a></li>
-    <li><a href="5-ap-lp-for2/">5 - Estrutura de Repetição FOR (Parte 2)</a></li>
-    <li><a href="6-ap-lp-def/">6 - Funções (DEF)</a></li>
-  </ul>
+
+  <h1>Renzo Machado Vaz</h1>
+  <p><strong>Idade:</strong> 18 anos</p>
+  <p><strong>E-mail:</strong> <a href="mailto:renzo.vaz@sempreceub.com">renzo.vaz@sempreceub.com</a></p>
+  <p><strong>Localização:</strong> Brasília – DF</p>
+  <p><strong>Curso:</strong> Engenharia de Software – CEUB (em andamento)</p>
+
+  <section>
+    <h2>Sobre Mim</h2>
+    <p>Sou estudante de Engenharia de Software no Centro Universitário CEUB, residente em Brasília-DF. Desde cedo, sou apaixonado por tecnologia, programação e inovação. Entrei no curso com o desejo de transformar ideias em soluções reais, criando sistemas que impactem firmemente o cotidiano das pessoas.</p>
+    <p>Atualmente estou no início de minha trajetória acadêmica, mas já venho desenvolvendo projetos pessoais e estudando por conta própria linguagens de programação e ferramentas de produtividade. Busco oportunidades de estágio ou participação em projetos para aplicar meus conhecimentos, crescer como profissional e contribuir com equipes multidisciplinares.</p>
+  </section>
+
+  <section>
+    <h2>Formação</h2>
+    <ul>
+      <li>Ensino Médio Completo</li>
+      <li>Engenharia de Software (iniciado em 2025 – CEUB)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Cursos Complementares</h2>
+    <ul>
+      <li>Microsoft Excel Intermediário</li>
+      <li>Microsoft Word Intermediário</li>
+      <li>Noções de HTML, CSS e lógica de programação</li>
+      <li>Google Workspace para produtividade</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projetos Acadêmicos</h2>
+
+    <div class="project">
+      <h3><a href="1-ap-lp-sequencia-if/">1 - Sequência IF</a></h3>
+      <pre><code>
+# Exemplo de código do projeto 1
+numero = int(input("Digite um número: "))
+if numero > 0:
+    print("Número positivo")
+else:
+    print("Número negativo ou zero")
+      </code></pre>
+    </div>
+
+    <div class="project">
+      <h3><a href="2-ap-lp-sequencia-if/">2 - Sequência IF (Parte 2)</a></h3>
+      <pre><code>
+# Exemplo de código do projeto 2
+idade = int(input("Digite sua idade: "))
+if idade >= 18:
+    print("Maior de idade")
+else:
+    print("Menor de idade")
+      </code></pre>
+    </div>
+
+    <div class="project">
+      <h3><a href="3-ap-lp-while/">3 - Estrutura de Repetição WHILE</a></h3>
+      <pre><code>
+# Exemplo de código do projeto 3
+contador = 0
+while contador < 5:
+    print("Contador:", contador)
+    contador += 1
+      </code></pre>
+    </div>
+
+    <div class="project">
+      <h3><a href="4-ap-lp-for/">4 - Estrutura de Repetição FOR</a></h3>
+      <pre><code>
+# Exemplo de código do projeto 4
+for i in range(5):
+    print("Valor de i:", i)
+      </code></pre>
+    </div>
+
+    <div class="project">
+      <h3><a href="5-ap-lp-for2/">5 - Estrutura de Repetição FOR (Parte 2)</a></h3>
+      <pre><code>
+# Exemplo de código do projeto 5
+for i in range(1, 11):
+    print(f"Tabuada do {i}")
+    for j in range(1, 11):
+        print(f"{i} x {j} = {i*j}")
+      </code></pre>
+    </div>
+
+    <div class="project">
+      <h3><a href="6-ap-lp-def/">6 - Funções (DEF)</a></h3>
+      <pre><code>
+# Exemplo de código do projeto 6
+def saudacao(nome):
+    print(f"Olá, {nome}!")
+
+saudacao("Renzo")
+      </code></pre>
+    </div>
+
+  </section>
+
 </body>
 </html>
+
