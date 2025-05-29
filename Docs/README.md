@@ -29,4 +29,5 @@ O site serve como uma central para apresentar:
 
 As principais tecnologias empregadas no desenvolvimento deste site foram:
 
-* **HTML5:** Para a estrut
+* **HTML5:** Para a estrutura
+* * **Github Pages:** Para hospedagem
