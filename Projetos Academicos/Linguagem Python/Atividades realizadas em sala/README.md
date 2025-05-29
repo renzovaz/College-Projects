@@ -1,14 +1,31 @@
-🧠 Atividades Feitas em Sala – Lógica de Programação
-Esta pasta contém atividades desenvolvidas durante as aulas presenciais da disciplina de Lógica de Programação no curso de Engenharia de Software (CEUB).
+# 🧠 Atividades Feitas em Sala – Lógica de Programação
 
-📝 Conteúdo das Atividades
-Exercícios práticos realizados em sala de aula
-Resolução de problemas propostos pelo professor
-Aplicação de lógica com Python em tempo real
-Prática com estruturas de decisão e repetição
-🛠️ Tecnologias Utilizadas
-Python 3.x
-Conceitos de lógica computacional e programação estruturada
-📌 Observação
-Os arquivos estão organizados por aula ou tema específico.
-Novas atividades serão adicionadas conforme forem desenvolvidas em sala.
+Esta pasta é dedicada a armazenar as atividades e exercícios desenvolvidos durante as aulas presenciais da disciplina de **Lógica de Programação**. As atividades foram realizadas como parte do curso de **Engenharia de Software no CEUB**.
+
+---
+
+## 📝 Conteúdo das Atividades
+
+Dentro desta pasta, você encontrará:
+
+* Exercícios práticos resolvidos diretamente em sala de aula.
+* Soluções para problemas e desafios propostos pelo professor durante as aulas.
+* Exemplos da aplicação de conceitos de lógica de programação utilizando a linguagem Python em tempo real.
+* Implementações práticas de estruturas de decisão (como `if`, `else`, `elif`) e estruturas de repetição (como `for` e `while`).
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+As principais ferramentas e conceitos empregados nas atividades incluem:
+
+* **Python 3.x**
+* Fundamentos da **lógica computacional**
+* Princípios da **programação estruturada**
+
+---
+
+## 📌 Observação
+
+* Os arquivos e projetos dentro deste repositório estão organizados, sempre que possível, por aula ou pelo tema específico abordado.
+* Novas atividades e exercícios serão adicionados progressivamente, à medida que forem desenvolvidos e concluídos em sala.
