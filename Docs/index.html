@@ -1,141 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Renzo Machado Vaz - Projetos Acadêmicos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfólio de Renzo Machado Vaz - Estudante de Engenharia de Software no CEUB.">
+  <title>Renzo Machado Vaz | Portfólio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #eef2ff, #dbeafe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1rem;
     }
-    h1, h2 {
-      color: #2c3e50;
+
+    .card {
+      background: #fff;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: all 0.3s ease;
     }
-    section {
-      margin-bottom: 40px;
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #3b82f6;
+      margin-bottom: 1rem;
     }
-    .project {
-      margin-bottom: 20px;
+
+    h1 {
+      font-size: 1.6rem;
+      color: #1f2937;
+      margin-bottom: 0.5rem;
     }
-    .project pre {
-      background-color: #ecf0f1;
-      padding: 10px;
-      overflow-x: auto;
+
+    .bio {
+      color: #4b5563;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      text-align: justify;
     }
-    a {
-      color: #2980b9;
+
+    .info {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      margin-top: 1.5rem;
+      font-weight: bold;
+      color: #1f2937;
+    }
+
+    ul {
+      text-align: left;
+      margin-top: 0.5rem;
+      margin-left: 1rem;
+      color: #4b5563;
+      font-size: 0.85rem;
+    }
+
+    .links {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .links a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #3b82f6;
+      color: white;
+      border-radius: 0.5rem;
       text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .links a:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      color: #9ca3af;
     }
   </style>
 </head>
 <body>
+  <div class="card">
+    <img src="https://via.placeholder.com/120" alt="Foto de Renzo" class="avatar">
+    <h1>Renzo Machado Vaz</h1>
+    <div class="bio">
+      Estudante de Engenharia de Software no Centro Universitário CEUB, residente em Brasília-DF. Desde cedo, sou apaixonado por tecnologia, programação e inovação. Entrei no curso com o desejo de transformar ideias em soluções reais, criando sistemas que impactem firmemente o cotidiano das pessoas. Atualmente estou no início de minha trajetória acadêmica, mas já venho desenvolvendo projetos pessoais e estudando por conta própria linguagens de programação e ferramentas de produtividade. Busco oportunidades de estágio ou participação em projetos para aplicar meus conhecimentos, crescer como profissional e contribuir com equipes multidisciplinares.
+    </div>
 
-  <h1>Renzo Machado Vaz</h1>
-  <p><strong>Idade:</strong> 18 anos</p>
-  <p><strong>E-mail:</strong> <a href="mailto:renzo.vaz@sempreceub.com">renzo.vaz@sempreceub.com</a></p>
-  <p><strong>Localização:</strong> Brasília – DF</p>
-  <p><strong>Curso:</strong> Engenharia de Software – CEUB (em andamento)</p>
+    <div class="section-title">📄 Currículo</div>
+    <div class="info">Nome: Renzo Machado Alves Vaz</div>
+    <div class="info">Idade: 18 anos</div>
+    <div class="info">E-mail: <a href="mailto:renzo.vaz@sempreceub.com">renzo.vaz@sempreceub.com</a></div>
+    <div class="info">Localização: Brasília - DF</div>
+    <div class="info">Curso: Engenharia de Software - CEUB (em andamento)</div>
 
-  <section>
-    <h2>Sobre Mim</h2>
-    <p>Sou estudante de Engenharia de Software no Centro Universitário CEUB, residente em Brasília-DF. Desde cedo, sou apaixonado por tecnologia, programação e inovação. Entrei no curso com o desejo de transformar ideias em soluções reais, criando sistemas que impactem firmemente o cotidiano das pessoas.</p>
-    <p>Atualmente estou no início de minha trajetória acadêmica, mas já venho desenvolvendo projetos pessoais e estudando por conta própria linguagens de programação e ferramentas de produtividade. Busco oportunidades de estágio ou participação em projetos para aplicar meus conhecimentos, crescer como profissional e contribuir com equipes multidisciplinares.</p>
-  </section>
-
-  <section>
-    <h2>Formação</h2>
+    <div class="section-title">🎓 Formação</div>
     <ul>
       <li>Ensino Médio Completo</li>
-      <li>Engenharia de Software (iniciado em 2025 – CEUB)</li>
+      <li>Engenharia de Software (iniciado em 2025 - CEUB)</li>
     </ul>
-  </section>
 
-  <section>
-    <h2>Cursos Complementares</h2>
+    <div class="section-title">📚 Cursos Complementares</div>
     <ul>
       <li>Microsoft Excel Intermediário</li>
       <li>Microsoft Word Intermediário</li>
       <li>Noções de HTML, CSS e lógica de programação</li>
       <li>Google Workspace para produtividade</li>
     </ul>
-  </section>
 
-  <section>
-    <h2>Projetos Acadêmicos</h2>
+    <div class="section-title">💡 Experiência Acadêmica</div>
+    <ul>
+      <li>Foco em desenvolvimento web, lógica e estruturas de dados</li>
+      <li>Participação em fóruns, grupos de estudo e eventos</li>
+      <li>Projetos autorais para marketing digital, adestramento canino e emagrecimento</li>
+    </ul>
 
-    <div class="project">
-      <h3><a href="1-ap-lp-sequencia-if/">1 - Sequência IF</a></h3>
-      <pre><code>
-# Exemplo de código do projeto 1
-numero = int(input("Digite um número: "))
-if numero > 0:
-    print("Número positivo")
-else:
-    print("Número negativo ou zero")
-      </code></pre>
+    <div class="links">
+      <a href="mailto:renzo.vaz@sempreceub.com"><i class="fas fa-envelope"></i>Email</a>
+      <a href="tel:+5561984258022"><i class="fas fa-phone"></i>Contato</a>
+      <a href="https://www.linkedin.com/in/renzo-machado-022b8a364/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+      <a href="https://github.com/renzovaz" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+      <a href="https://drive.google.com/drive/u/2/folders/1WclirU1gYG-9FiRXkUfrWqR3ZARZHP5G" target="_blank"><i class="fas fa-folder-open"></i>Portfólio Drive</a>
     </div>
 
-    <div class="project">
-      <h3><a href="2-ap-lp-sequencia-if/">2 - Sequência IF (Parte 2)</a></h3>
-      <pre><code>
-# Exemplo de código do projeto 2
-idade = int(input("Digite sua idade: "))
-if idade >= 18:
-    print("Maior de idade")
-else:
-    print("Menor de idade")
-      </code></pre>
-    </div>
-
-    <div class="project">
-      <h3><a href="3-ap-lp-while/">3 - Estrutura de Repetição WHILE</a></h3>
-      <pre><code>
-# Exemplo de código do projeto 3
-contador = 0
-while contador < 5:
-    print("Contador:", contador)
-    contador += 1
-      </code></pre>
-    </div>
-
-    <div class="project">
-      <h3><a href="4-ap-lp-for/">4 - Estrutura de Repetição FOR</a></h3>
-      <pre><code>
-# Exemplo de código do projeto 4
-for i in range(5):
-    print("Valor de i:", i)
-      </code></pre>
-    </div>
-
-    <div class="project">
-      <h3><a href="5-ap-lp-for2/">5 - Estrutura de Repetição FOR (Parte 2)</a></h3>
-      <pre><code>
-# Exemplo de código do projeto 5
-for i in range(1, 11):
-    print(f"Tabuada do {i}")
-    for j in range(1, 11):
-        print(f"{i} x {j} = {i*j}")
-      </code></pre>
-    </div>
-
-    <div class="project">
-      <h3><a href="6-ap-lp-def/">6 - Funções (DEF)</a></h3>
-      <pre><code>
-# Exemplo de código do projeto 6
-def saudacao(nome):
-    print(f"Olá, {nome}!")
-
-saudacao("Renzo")
-      </code></pre>
-    </div>
-
-  </section>
-
+    <footer>© 2025 Renzo Machado Vaz</footer>
+  </div>
 </body>
 </html>
-
