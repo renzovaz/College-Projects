@@ -32,7 +32,7 @@ Para executar os projetos e scripts contidos neste repositório, siga os passos 
     * ➔ [Baixar Python](https://www.python.org/downloads/)
 2.  **Clone este repositório (ou baixe os arquivos do projeto desejado).**
     ```bash
-    git clone <URL_DO_SEU_REPOSITORIO>
+    git clone <https://github.com/renzovaz/College-Projects/tree/main>
     ```
 3.  **Navegue até o diretório do projeto específico.**
     ```bash
