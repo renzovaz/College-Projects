@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta Relojoaria - A Arte do Tempo</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            /* Ajuste de cores para melhor contraste */
+            --primary-gold: #e5c15d; /* Dourado mais luminoso */
+            --secondary-gold: #b39030; /* Dourado mais escuro para bordas */
+            --bg-dark: #121212; /* Cinza muito escuro (base) */
+            --card-bg: #1e1e1e; /* Contraste sutil para cartões */
+            --text-light: #e0e0e0; /* Branco gelo para leitura confortável (corpo principal) */
+            --text-secondary: #aaa; /* CINZA CLARO para texto auxiliar */
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+        
+        /* Navbar com melhor legibilidade */
+        .navbar {
+            background: rgba(18, 18, 18, 0.98) !important;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(229, 193, 93, 0.3);
+        }
+        
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: var(--primary-gold) !important;
+            text-shadow: 0 0 10px rgba(229, 193, 93, 0.3);
+        }
+        
+        .nav-link {
+            color: #fff !important;
+            font-weight: 400;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-gold) !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(18,18,18,1)), 
+                        url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1600') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 200;
+            letter-spacing: 8px;
+            margin-bottom: 1rem;
+            color: var(--primary-gold);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        
+        .btn-gold {
+            background: linear-gradient(45deg, var(--secondary-gold), var(--primary-gold));
+            color: #000;
+            padding: 15px 40px;
+            border: none;
+            letter-spacing: 2px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-gold:hover {
+            background: linear-gradient(45deg, var(--primary-gold), #fff);
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(229, 193, 93, 0.4);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 200;
+            letter-spacing: 5px;
+            margin-bottom: 3rem;
+            color: var(--primary-gold);
+        }
+
+        /* Cartões de Marca para Carrossel */
+        .brand-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s;
+            cursor: pointer;
+            overflow: hidden;
+            height: 350px;
+            margin: 0 10px; /* Espaço entre os itens do carrossel */
+        }
+        
+        .brand-card:hover {
+            transform: scale(1.03);
+            border-color: var(--primary-gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        .brand-card img {
+            height: 200px;
+            object-fit: cover; 
+            transition: transform 0.4s;
+            opacity: 0.8;
+        }
+        
+        .brand-card:hover img {
+            opacity: 1;
+        }
+        
+        .brand-card h5 {
+            color: var(--primary-gold);
+            margin-top: 15px;
+        }
+        
+        .brand-card .card-text {
+            color: var(--text-secondary); /* Melhor contraste */
+        }
+
+        /* Carousel Customization */
+        #brandCarousel .carousel-inner {
+            display: flex;
+        }
+
+        #brandCarousel .carousel-item {
+            display: block; /* Garante que o item seja visível */
+            transition: transform 0.5s ease-in-out;
+            margin-right: 0;
+            flex: 0 0 33.333%; /* 3 itens por slide em desktop */
+        }
+        
+        @media (max-width: 992px) {
+            #brandCarousel .carousel-item {
+                flex: 0 0 50%; /* 2 itens em tablets */
+            }
+        }
+
+        @media (max-width: 768px) {
+            #brandCarousel .carousel-item {
+                flex: 0 0 100%; /* 1 item em mobile */
+            }
+            .brand-card {
+                margin: 0;
+            }
+        }
+
+        /* Cartões de Relógio Otimizados */
+        .watch-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+            height: 100%;
+        }
+        
+        .watch-card img {
+            height: 280px;
+            object-fit: cover;
+            width: 100%;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .brand-label {
+            color: #888;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .model-name {
+            color: #fff; /* Garante visibilidade máxima */
+            font-size: 1.1rem;
+            margin: 5px 0 10px 0;
+            font-weight: 500;
+        }
+
+        .price-tag {
+            color: var(--primary-gold);
+            font-size: 1.4rem;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Inputs e Filtros */
+        .form-control, .form-select {
+            background: #252525;
+            border: 1px solid #444;
+            color: var(--text-light);
+            padding: 12px;
+        }
+
+        /* Destaques (Features) - Melhor contraste para texto auxiliar */
+        .text-muted-enhanced {
+            color: var(--text-secondary) !important;
+        }
+
+        .footer {
+            background: #000;
+            border-top: 1px solid rgba(229, 193, 93, 0.2);
+            padding: 4rem 0;
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home"><i class="far fa-clock me-2"></i>ALTA RELOJOARIA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#marcas">MARCAS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#catalogo">CATÁLOGO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">SOBRE</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="display-1">TEMPO É ARTE</h1>
+            <p class="lead mb-4 text-light">Curadoria exclusiva das peças mais desejadas do mundo.</p>
+            <button class="btn btn-gold" onclick="document.getElementById('catalogo').scrollIntoView({behavior: 'smooth'})">
+                VER COLEÇÃO 2025
+            </button>
+        </div>
+    </section>
+
+    <section class="py-5" style="background: #151515;">
+        <div class="container">
+            <h2 class="section-title mb-5">NOSSOS VALORES</h2>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 border border-secondary rounded-3 h-100">
+                        <i class="fas fa-gem fa-2x mb-3" style="color: var(--primary-gold);"></i>
+                        <h4 style="color: #fff;">Autenticidade</h4>
+                        <p class="text-muted-enhanced">Todos os relógios acompanham documentação original e certificação.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 border border-secondary rounded-3 h-100">
+                        <i class="fas fa-tools fa-2x mb-3" style="color: var(--primary-gold);"></i>
+                        <h4 style="color: #fff;">Manutenção</h4>
+                        <p class="text-muted-enhanced">Serviço de revisão realizado por mestres relojoeiros certificados.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 border border-secondary rounded-3 h-100">
+                        <i class="fas fa-shield-alt fa-2x mb-3" style="color: var(--primary-gold);"></i>
+                        <h4 style="color: #fff;">Garantia</h4>
+                        <p class="text-muted-enhanced">Cobertura internacional e garantia de procedência.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="marcas" class="py-5">
+        <div class="container">
+            <h2 class="section-title">MARCAS EM DESTAQUE</h2>
+            
+            <div id="brandCarousel" class="carousel slide" data-bs-ride="carousel">
+                
+                <div class="carousel-inner" role="listbox">
+                    
+                    <div class="carousel-item active">
+                        <div class="card brand-card text-center" onclick="filterByBrandClick('patek')">
+                            <img src="https://images.unsplash.com/photo-1639037803606-d5f0b4356616?w=600" class="card-img-top" alt="Patek Philippe">
+                            <div class="card-body">
+                                <h5>PATEK PHILIPPE</h5>
+                                <p class="card-text">O ápice da tradição Suíça</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="card brand-card text-center" onclick="filterByBrandClick('rolex')">
+                            <img src="https://images.unsplash.com/photo-1549970921-97b79116ac8c?w=600" class="card-img-top" alt="Rolex">
+                            <div class="card-body">
+                                <h5>ROLEX</h5>
+                                <p class="card-text">O rei dos relógios</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card brand-card text-center" onclick="filterByBrandClick('audemars')">
+                            <img src="https://images.unsplash.com/photo-1595255470870-07e3241b1649?w=600" class="card-img-top" alt="Audemars Piguet">
+                            <div class="card-body">
+                                <h5>AUDEMARS PIGUET</h5>
+                                <p class="card-text">Para quem quebra regras</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="card brand-card text-center" onclick="filterByBrandClick('richard')">
+                            <img src="https://images.unsplash.com/photo-1624467332768-45e0d48f95c4?w=600" class="card-img-top" alt="Richard Mille">
+                            <div class="card-body">
+                                <h5>RICHARD MILLE</h5>
+                                <p class="card-text">Inovação e tecnologia extrema</p>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="carousel-item">
+                        <div class="card brand-card text-center" onclick="filterByBrandClick('omega')">
+                            <img src="https://images.unsplash.com/photo-1623126908029-58cb08a2b272?w=600" class="card-img-top" alt="Omega">
+                            <div class="card-body">
+                                <h5>OMEGA</h5>
+                                <p class="card-text">Pioneirismo espacial</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#brandCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#brandCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalogo" class="py-5" style="background: #0f0f0f;">
+        <div class="container">
+            <h2 class="section-title">CATÁLOGO</h2>
+            
+            <div class="row mb-5 g-3">
+                <div class="col-md-4">
+                    <label class="text-muted-enhanced mb-2">Marca</label>
+                    <select class="form-select" id="filterBrand">
+                        <option value="all">Todas as Marcas</option>
+                        <option value="patek">Patek Philippe</option>
+                        <option value="richard">Richard Mille</option>
+                        <option value="rolex">Rolex</option>
+                        <option value="audemars">Audemars Piguet</option>
+                        <option value="omega">Omega</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="text-muted-enhanced mb-2">Faixa de Preço</label>
+                    <select class="form-select" id="filterPrice">
+                        <option value="all">Qualquer Preço</option>
+                        <option value="low">Até R$ 100.000</option>
+                        <option value="mid">R$ 100.000 - R$ 300.000</option>
+                        <option value="high">Acima de R$ 300.000</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="text-muted-enhanced mb-2">Estilo</label>
+                    <select class="form-select" id="filterStyle">
+                        <option value="all">Todos os Estilos</option>
+                        <option value="sport">Esportivo</option>
+                        <option value="classic">Clássico / Dress</option>
+                        <option value="diver">Mergulho</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="loader" class="loader">
+                <div class="spinner-border" role="status"></div>
+                <p class="mt-2 text-muted-enhanced">Carregando coleção...</p>
+            </div>
+
+            <div class="row g-4" id="catalogGrid">
+                </div>
+            
+            <div id="noResults" class="text-center mt-5" style="display: none;">
+                <i class="far fa-sad-tear fa-3x mb-3 text-muted-enhanced"></i>
+                <h3 class="text-light">Nenhum relógio encontrado com estes filtros.</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="text-start mb-4" style="color: var(--primary-gold);">SOBRE NÓS</h2>
+                    <p class="lead text-light">Mais do que vendedores, somos curadores de história.</p>
+                    <p class="text-muted-enhanced">Fundada em 2025, nossa boutique digital conecta colecionadores exigentes às manufaturas mais prestigiadas do planeta. Garantimos a procedência de cada parafuso e a precisão de cada movimento.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1596558450268-9c27524ba856?w=800" class="img-fluid rounded shadow-lg" style="border: 1px solid #333;" alt="Oficina de Relojoaria">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <h4 style="color: var(--primary-gold); letter-spacing: 3px;">ALTA RELOJOARIA</h4>
+            <div class="social-icons my-4">
+                <a href="#" class="mx-2 text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="mx-2 text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
+                <a href="#" class="mx-2 text-white"><i class="far fa-envelope fa-lg"></i></a>
+            </div>
+            <p class="small text-muted-enhanced">&copy; 2025 Alta Relojoaria. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // ---------------------------------------------------------
+        // SIMULAÇÃO DE API (Banco de Dados Local)
+        // ---------------------------------------------------------
+        
+        const watchDatabase = [
+            {
+                id: 1,
+                brand: "patek",
+                model: "Nautilus 5711/1A",
+                price: 750000,
+                style: "sport",
+                image: "https://images.unsplash.com/photo-1620625515032-6ed0c1790c75?w=500",
+                year: 2022
+            },
+            {
+                id: 2,
+                brand: "rolex",
+                model: "Submariner Date",
+                price: 85000,
+                style: "diver",
+                image: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=500",
+                year: 2024
+            },
+            {
+                id: 3,
+                brand: "audemars",
+                model: "Royal Oak Selfwinding",
+                price: 280000,
+                style: "sport",
+                image: "https://images.unsplash.com/photo-1617317376997-8748e6862c01?w=500",
+                year: 2023
+            },
+            {
+                id: 4,
+                brand: "richard",
+                model: "RM 11-03 McLaren",
+                price: 1500000,
+                style: "sport",
+                image: "https://images.unsplash.com/photo-1624467332768-45e0d48f95c4?w=500",
+                year: 2021
+            },
+            {
+                id: 5,
+                brand: "omega",
+                model: "Speedmaster Professional",
+                price: 45000,
+                style: "sport",
+                image: "https://images.unsplash.com/photo-1623126908029-58cb08a2b272?w=500",
+                year: 2024
+            },
+            {
+                id: 6,
+                brand: "patek",
+                model: "Calatrava Gold",
+                price: 180000,
+                style: "classic",
+                image: "https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=500",
+                year: 2020
+            },
+            {
+                id: 7,
+                brand: "rolex",
+                model: "Day-Date 40 Gold",
+                price: 250000,
+                style: "classic",
+                image: "https://images.unsplash.com/photo-1596460107935-77b3113919c4?w=500",
+                year: 2023
+            },
+            {
+                id: 8,
+                brand: "omega",
+                model: "Seamaster 300M",
+                price: 32000,
+                style: "diver",
+                image: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=500",
+                year: 2024
+            }
+        ];
+
+        // ---------------------------------------------------------
+        // LÓGICA DE APLICAÇÃO
+        // ---------------------------------------------------------
+
+        const grid = document.getElementById('catalogGrid');
+        const loader = document.getElementById('loader');
+        const noResults = document.getElementById('noResults');
+
+        // Função para formatar dinheiro (BRL)
+        const formatMoney = (value) => {
+            return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        };
+
+        // Função Principal de Renderização
+        function renderWatches(watches) {
+            grid.innerHTML = '';
+            
+            if (watches.length === 0) {
+                noResults.style.display = 'block';
+                return;
+            } else {
+                noResults.style.display = 'none';
+            }
+
+            watches.forEach(watch => {
+                const col = document.createElement('div');
+                // Adiciona a classe 'watch-item' para o efeito de transição
+                col.className = 'col-md-3 col-sm-6 watch-item'; 
+                
+                col.innerHTML = `
+                    <div class="card watch-card">
+                        <img src="${watch.image}" class="card-img-top" alt="${watch.model}">
+                        <div class="card-body">
+                            <div class="brand-label">${watch.brand}</div>
+                            <h5 class="model-name">${watch.model}</h5>
+                            <span class="price-tag">${formatMoney(watch.price)}</span>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <small class="text-muted-enhanced"><i class="far fa-calendar-alt me-1"></i> ${watch.year}</small>
+                                <button class="btn btn-sm btn-outline-warning" onclick="contactAbout('${watch.model}')">Tenho Interesse</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(col);
+            });
+        }
+
+        // Função de Filtragem
+        function applyFilters() {
+            loader.style.display = 'block';
+            grid.style.opacity = '0.5';
+
+            setTimeout(() => {
+                const brandVal = document.getElementById('filterBrand').value;
+                const priceVal = document.getElementById('filterPrice').value;
+                const styleVal = document.getElementById('filterStyle').value;
+
+                const filtered = watchDatabase.filter(item => {
+                    const matchBrand = brandVal === 'all' || item.brand === brandVal;
+                    const matchStyle = styleVal === 'all' || item.style === styleVal;
+
+                    let matchPrice = true;
+                    if (priceVal === 'low') matchPrice = item.price <= 100000;
+                    if (priceVal === 'mid') matchPrice = item.price > 100000 && item.price <= 300000;
+                    if (priceVal === 'high') matchPrice = item.price > 300000;
+
+                    return matchBrand && matchStyle && matchPrice;
+                });
+
+                renderWatches(filtered);
+                
+                loader.style.display = 'none';
+                grid.style.opacity = '1';
+            }, 300);
+        }
+
+        // Event Listeners
+        document.getElementById('filterBrand').addEventListener('change', applyFilters);
+        document.getElementById('filterPrice').addEventListener('change', applyFilters);
+        document.getElementById('filterStyle').addEventListener('change', applyFilters);
+
+        // Atalho vindo dos Cards de Marca no Carrossel
+        function filterByBrandClick(brand) {
+            document.getElementById('filterBrand').value = brand;
+            document.getElementById('catalogo').scrollIntoView({behavior: 'smooth'});
+            applyFilters();
+        }
+
+        // Ação do botão "Tenho Interesse"
+        function contactAbout(modelName) {
+            alert(`Ótima escolha! Enviando consulta sobre o ${modelName}.`);
+            // Em uma implementação real, você enviaria o usuário para um formulário ou WhatsApp
+        }
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', () => {
+    // ---------------------------------------------------------
+    // Lógica original de renderização de catálogo e filtros
+    // ---------------------------------------------------------
+    renderWatches(watchDatabase); // Carrega tudo ao abrir
+
+    // ---------------------------------------------------------
+    // LÓGICA DO CARROSSEL OTIMIZADA
+    // ---------------------------------------------------------
+
+    const carousel = document.getElementById('brandCarousel');
+    const carouselInner = carousel.querySelector('.carousel-inner');
+    const items = carousel.querySelectorAll('.carousel-item');
+    const itemWidth = items[0].offsetWidth; // Largura do item (que corresponde à visualização de 1 card)
+    let currentPosition = 0; // Posição inicial (0)
+    
+    // Total de itens que podem ser avançados (total de itens - quantos são visíveis)
+    const getVisibleItems = () => {
+        if (window.innerWidth >= 992) return 3; // Desktop
+        if (window.innerWidth >= 768) return 2; // Tablet
+        return 1; // Mobile
+    };
+
+    // Ajusta a translação para simular o avanço de 1 item
+    const updateCarouselPosition = (direction) => {
+        const visibleItems = getVisibleItems();
+        const maxScroll = items.length - visibleItems;
+
+        if (direction === 'next') {
+            currentPosition++;
+            if (currentPosition > maxScroll) {
+                // Loop: Volta para o início se passar do limite
+                currentPosition = 0;
+            }
+        } else if (direction === 'prev') {
+            currentPosition--;
+            if (currentPosition < 0) {
+                // Loop: Vai para o final se voltar do início
+                currentPosition = maxScroll;
+            }
+        }
+        
+        // Aplica a translação
+        const newTransform = -currentPosition * itemWidth;
+        carouselInner.style.transform = `translateX(${newTransform}px)`;
+
+        // Atualiza a classe 'active' para o primeiro item visível
+        items.forEach((item, index) => {
+            if (index === currentPosition) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    };
+
+    // Adiciona event listeners aos botões
+    carousel.querySelector('.carousel-control-next').addEventListener('click', (e) => {
+        e.preventDefault();
+        updateCarouselPosition('next');
+    });
+
+    carousel.querySelector('.carousel-control-prev').addEventListener('click', (e) => {
+        e.preventDefault();
+        updateCarouselPosition('prev');
+    });
+
+    // Garante que a posição inicial seja 0 e o carrossel comece corretamente.
+    updateCarouselPosition('none');
+
+    // Opcional: Recalcula a largura do item e a posição se a janela for redimensionada
+    window.addEventListener('resize', () => {
+        // Recarrega a largura do item após o resize
+        const resizedItemWidth = items[0].offsetWidth;
+        // Zera a posição e aplica a nova translação
+        currentPosition = 0; 
+        carouselInner.style.transform = `translateX(0px)`;
+        
+        // Garante que o item 'active' esteja correto
+        items.forEach((item, index) => {
+            item.classList.remove('active');
+        });
+        items[0].classList.add('active');
+    });
+});
+
+    </script>
+</body>
+</html>
