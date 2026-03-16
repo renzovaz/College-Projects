@@ -1,0 +1,32 @@
+body {
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+main {
+    margin: auto;
+    padding: 20px;
+    border-top: double darkorange 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px; 
+    width: 80%;
+    margin-top: 50px;
+}
+.div1 {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-left: solid red 5px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 15px;
+
+}
+.div2 {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-left: solid blue 5px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    background-color: rgba(100, 149, 237, 0.1);
+    
+}

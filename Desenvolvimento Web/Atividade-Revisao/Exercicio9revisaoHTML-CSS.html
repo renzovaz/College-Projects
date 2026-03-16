@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 9 HTML CSS</title>
+    <style>
+        header {
+            background-color: lightskyblue;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: black;
+            font-weight: bold;
+            font-size: 2em;
+        }
+        nav {
+            background-color: lightgreen;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 800;
+            
+        }
+        ul{
+            font-size: 14px;
+            list-style-type: none;
+            
+        }
+        main {
+            background-color: whitesmoke;
+            border-left: solid red 6px;
+            margin: 30px 20px 10px;
+            padding: 20px 30px;
+        }
+        article {
+            border-left: solid green 6px;
+            background-color: rgba(255, 246, 246,0.3);
+            border-radius: 20px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            margin: 20px;
+            padding: 10px;
+
+        }
+        aside {
+            background-color: hsla(300, 76%, 72%, 0.5);
+            border-left: solid orange 6px;
+            border-radius: 10px;
+            padding: 20px;
+            
+        }
+        footer {
+            background-color: hsl(196, 59%, 37%);
+            font-size: 0.8em;
+            font-weight: bold;
+            margin: 25px;
+        }
+        .lista-menu {
+            padding: 0;
+            margin: 0;
+            display: block;
+            background-color: white;
+            color: darkblue;
+            
+        }
+        a{
+            text-decoration: none;
+            display: block;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+        #paragrafo {
+            font-style: italic;
+            font-variant: small-caps;
+            text-transform: capitalize;
+            color: crimson;
+            font-size: 2em;
+            background-color: azure;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exemplo 9 Web Semântica com CSS</h1>
+        <h2>A tag semântica <strong>header</strong></h2>
+        <p>A tag header é utilizada para incluir um conteúdo introdutório de navegação ou seção. Aqui usamos a tag
+            header.</p>
+    </header>
+    <nav>
+        <h2>Tag semântica <strong>nav</strong></h2>
+        <h3>A tag semântica <strong>nav</strong> é usada para representar elementos de navegação. Geralmente
+            usamos lista não ordenadas para isso. </h3>
+        <ul class="lista-menu">
+            <li><a href="http://">Menu1</a></li>
+            <li><a href="http://">Menu2</a></li>
+            <li><a href="http://">Menu3</a></li>
+            <li><a href="http://">Menu4</a></li>
+            <li><a href="http://">Menu5</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Elemento semântico main</h2>
+        <p>Elemento semântico main traz o contéudo principal da página.</p>
+        <section>
+            <h2>Web Semântica</h2>
+            <p id="paragrafo">A web semântica é movimento coloborativo para organizar a informação de forma mais legível para máquinas
+                por meio de formatação de dados.</p>
+            <p>Neste tópico estamos usando a tag semântica <strong>section</strong>
+                a tag section representa seções dentro do documento htlm. Nela nos descrevemos os tópicos do documento
+                HTML.
+            </p>
+            <article>
+                <h2>Article</h2>
+                <p>O elemento article é utilizado quando precisamos declarar um conteúdo que não precisa de outro para
+                    fazer sentido.Por exemplo:</p>
+            </article>
+            <article>
+                <h2>Article 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptas sed magnam. Repellendus,
+                    explicabo doloribus. Modi deserunt soluta debitis eos. Laboriosam consequatur repudiandae quis velit
+                    non, eum at. Explicabo, porro.</p>
+            </article>
+
+            <aside>
+                <h2>Aside</h2>
+                <p>O elemento aside é utilizado quando precisamos criar um conteúdo adicional. Geralmente usamos esse
+                    elemento como um menu auxiliar</p>
+                <ul class="lista-menu">
+                    <li><a href="http://"> menu auxiliar 1</a></li>
+                    <li><a href="http://"> menu auxiliar 2</a></li>
+                    <li><a href="http://"> menu auxiliar 3</a></li>
+                    <li><a href="http://"> menu auxiliar 4</a></li>
+                </ul>
+            </aside>
+
+        </section>
+        <section>
+            <h2>CSS</h2>
+            <p>O CSS (Cascading Style Sheets, ou Folhas de Estilo em Cascata) é uma linguagem usada para estilizar
+                elementos em páginas web. Ele permite controlar a aparência de um site, como cores, fontes, layouts,
+                espaçamentos e muito mais, separando o conteúdo (HTML) da apresentação visual.</p>
+            <p>Para aplicarmos as folhas de estilo a um documento html, devemos usar regras que são expostas por meio de
+                seletores, propriedades e valores. A seguir descrevemos os pricipais seletores utilizados.</p>
+            <h2>Princípais tipos de seletores CSS</h2>
+            <ul>
+                <li><strong>Seletor de Tipo (tag)</strong> Esse seletor é utilizado por meio de tags htmls. Ou seja, ele estiliza elementos com base na tag html.</li>
+                <li><strong>Seletor de Id</strong> Esse seletor estiliza um elemento html que tenha o atributo id especificado. Normalmente ele é único.</li>
+                <li><strong>Seletor de Classe</strong> Esse seletor estiliza elementos por meio do atributo class, ou seja, ele estiliza elementos com uma classe específica.</li>
+            </ul>
+            <p>Nesta página exemplificamos os elementos ou tags semânticas e aplicamos o css para estilizar e demostrar sua utilização por meio de seletores diversos.</p>
+            <p>Para usarmos o css nesta página vamos usar a tag style e dentro dela colocaremos nossas regras css.</p>
+
+        </section>
+    </main>
+    <footer>
+        <h3>Texto de rodapé</h3>
+        <h3>Criado por : Rogério Alves</h3>
+        <h3>Em 10/03/2025.</h3>
+    </footer>
+</body>
+</html>
