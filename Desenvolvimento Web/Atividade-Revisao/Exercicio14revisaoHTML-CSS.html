@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 14 - HTML CSS - Flexbox</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 20px;
+        }
+        .div1 {
+            border-left: solid red 6px;
+            padding: 25px;
+            margin: 20px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: justify;
+        }
+        .flex-container {
+            display: flex;
+            flex-direction: row-reverse;
+            height: 200px;
+            border: solid black 5px;
+            
+        }
+        .flex-container > div {
+            background-color: rgb(233, 5, 166);
+            color: white;
+            padding: 20px;
+            margin: 30px;
+            font-size: 30px;
+            width: 40%;
+        }
+        span {
+            font-weight: bold;
+            color: rgb(233, 5, 166);
+        }
+        .div1 {
+            align-items: stretch;
+            margin: 25px;
+        }
+        .div2 {
+            align-items: center;
+            margin: 25px;
+        }
+        .div3{
+            align-items: baseline;
+            margin: 25px;
+        }
+        .div4 {
+            align-items: flex-start;
+            margin: 25px;
+        }
+        .div5{
+            align-items: flex-end;
+            margin: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo 14 - HTML CSS - Flexbox</h1>
+    <h1>Flex-wrap</h1>
+    <h2> flex-wrap:<span>wrap;</span></h2>
+    <div class="div1">
+        <p>
+            A propriedade CSS flex-wrap define se os itens flexíveis são forçados a ficarem na mesma linha ou se podem
+            ser quebrados em várias linhas.
+        </p>
+        <p>
+            O valor padrão do flex-wrap é nowrap, o que significa que os itens flexíveis são forçados a ficarem na mesma
+            linha, mesmo que isso signifique que eles sejam redimensionados para caber. Se o valor for wrap, os itens
+            flexíveis podem ser quebrados em várias linhas, se necessário.
+
+        </p>
+        <p>
+            O flex-wrap também controla a direção em que as linhas são empilhadas. O valor wrap padrão empilha as linhas
+            da esquerda para a direita, se o flex-direction for row, ou de cima para baixo, se o flex-direction for
+            column. O valor wrap-reverse empilha as linhas da direita para a esquerda ou de baixo para cima,
+            respectivamente.
+        </p>
+    </div>
+    <div class="flex-container div1">
+        <div> 1</div>
+        <div> 2 </div>
+        <div> 3 </div>
+        <div> 4 </div>
+    </div>
+    <div class="flex-container div2">
+        <div> 1</div>
+        <div> 2 </div>
+        <div> 3 </div>
+        <div> 4 </div>
+    </div>
+    <div class="flex-container div3">
+        <div> 1</div>
+        <div> 2 </div>
+        <div> 3 </div>
+        <div> 4 </div>
+    </div>
+    <div class="flex-container div4">
+        <div> 1</div>
+        <div> 2 </div>
+        <div> 3 </div>
+        <div> 4 </div>
+    </div>
+    <div class="flex-container div5">
+        <div> 1</div>
+        <div> 2 </div>
+        <div> 3 </div>
+        <div> 4 </div>
+    </div>
+</body>
+</html>
