@@ -24,9 +24,24 @@
             color: black;
             font-weight: 800;
         }
-        @media all and (max-width: 768px) {
+        @media all and (max-width: 800px) {
             .navigation {
-                justify-content: center;
+                justify-content: space-around;
+            }
+        }
+        @media all and (max-width: 600px) {
+            .navigation {
+                flex-flow: column-reverse;
+                padding: 0;
+            }
+            .navigation a {
+                text-align: center;
+                padding: 10px;
+                border-top: solid gold 1px;
+                border-bottom: solid 1px rgb(134, 97, 3);
+            }
+            .navigation li:last-of-type a {
+                border-bottom: none;
             }
         }
     </style>
