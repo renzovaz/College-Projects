@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Exemplo 18 - Revisao Bootstrap</title>
+</head>
+<body>
+    <div class="container-sm">
+        <h1>Exemplo 18 - Revisao sobre Bootstrap</h1>
+        <div class="alert alert-info" role="alert">
+            <h2>O que e o Bootstrap</h2>
+            <p>O Bootstrap é o framework front-end mais popular do mundo, utilizado para criar sites e aplicações web
+                responsivos
+                de forma rápida e fácil. Ele fornece uma coleção de componentes CSS, HTML e JavaScript pré-estilizados
+                (como botões, formulários e navegação) que se adaptam automaticamente a diferentes tamanhos de tela
+                (mobile-first).
+            </p>
+        </div>
+        <div class="alert alert-success" role="alert">
+            <h2>Bootstrap Cores Contextuais</h2>
+            <p>
+                As cores contextuais no Bootstrap 5 são classes utilitárias baseadas
+                em temas que permitem transmitir significado através das cores, facilitando a estilização de textos,
+                fundos, bordas e componentes.
+                Elas seguem um padrão de nomenclatura (primary, success, danger, etc.) que pode ser aplicado a
+                diferentes elementos
+            </p>
+        </div>
+        <div class="alert alert-primary" role="alert">
+            <h2>Bootstrap Container e container-fluid</h2>
+            <p>Em Bootstrap, as classes .container e .container-fluid são elementos de layout fundamentais, mas com
+                comportamentos de largura distintos.</p>
+            <h2>Bootstrap container</h2>
+            <p>O .container cria um layout de largura fixa responsiva (ou "boxed layout"). </p>
+            <ul>
+                <li>Comportamento: Ele define uma max-width em cada breakpoint responsivo (pequeno, médio, grande,
+                    etc.), ajustando seu tamanho em "degraus" à medida que a largura da tela muda.</li>
+                <li>
+                    Alinhamento: O conteúdo dentro do container é automaticamente centralizado na página, com margens
+                    laterais (padding) para evitar que o conteúdo toque as bordas da tela.
+                </li>
+                <li>
+                    Ideal para: Layouts de conteúdo principal onde se deseja uma leitura confortável e centralizada,
+                    como artigos de blog ou seções de texto.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-sm">
+        <h2>Uso do Container-Fluid</h2>
+        <div class="alert alert-warning" role="alert">
+            <p>A classe .container-fluid no Bootstrap cria um contêiner de largura total (100%), abrangendo toda a
+                extensão da tela ou dispositivo. Diferente do .container fixo, ele não possui larguras máximas
+                definidas, sendo ideal para layouts responsivos que ocupam a tela inteira, como headera, footers ou
+                seções.</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

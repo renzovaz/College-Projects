@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Exemplo 21 - Revisao Bootstrap</title>
+    <style>
+        .painel {
+            font-weight: bold;
+            border-radius: 5px;
+            border-left: solid red 10px;
+            margin: 15px;
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-sm">
+        <h1>Exemplo 21 - Revisao Bootstrap - Formulario</h1>
+        <form action="paginaDestino.aspx" method="get" class="painel mt-5">
+            <h3>Cadastro de pessoa</h3>
+            <div class="row">
+                <div class="col 4">
+                    <label for="">CPF</label>
+                    <input type="text" name="txtCPF" id="txtCPF" class="form-control">
+                </div>
+                <div class="col 8">
+                    <label for="">Nome</label>
+                    <input type="text" name="txtNome" id="txtNome" class="form-control">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label for="">Nome da Mae</label>
+                    <input type="text" name="txtNomeMae" id="txtNomeMae" class="form-control">
+                </div>
+                <div class="col-6">
+                    <label for="">Nome do Pai</label>
+                    <input type="text" name="txtNomePai" id="txtNomePai" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for="">Data de Nascimento</label>
+                    <input type="date" name="txtDataNascimento" id="txtDataNascimento" class="form-control">
+                </div>
+                <div class="col-8">
+                    <label for="">Email</label>
+                    <input type="email" name="txtEmail" id="txtEmail" class="form-control">
+                </div>
+            </div>
+            <div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary mt-4" type="button">Cadastrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
